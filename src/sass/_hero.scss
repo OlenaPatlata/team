@@ -105,3 +105,9 @@ body {
   opacity: var(--swiper-pagination-bullet-opacity, 1);
   background: #bb1219;
 }
+.swiper-button-prev:after {
+  content: '';
+}
+.swiper-button-next:after {
+  content: '';
+}
