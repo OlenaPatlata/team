@@ -1,0 +1,28 @@
+.btn {
+  font-family: Inter, Sans-Serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(-background-btn-normal);
+  color: var(--color-button-text);
+  @include font(14px, 1.21, 600);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @include mq(desctop) {
+    @include font(16px, 1.19, 600);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  @include mq(hd) {
+    @include font(20px, 1.2, 600);
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--background-btn-hover);
+  }
+  &:active {
+    background-color: var(--background-btn-pressed);
+  }
+}
