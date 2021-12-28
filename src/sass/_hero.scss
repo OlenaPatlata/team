@@ -1,0 +1,120 @@
+.hero {
+  background: var(--background-dark);
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__title {
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-family: Inter;
+    @include font(16px, 1.5, 700);
+
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: var(--color-title);
+  }
+  &__text {
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-family: Inter;
+    @include font(12px, 1.5, 400);
+
+    text-align: center;
+    color: var(--color-text);
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border: none;
+    width: 177px;
+    height: 50px;
+    background-color: var(--background-btn-normal);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: var(--color-button-text);
+  }
+}
+
+@include mq(tablet) {
+  .hero {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    &__wrap-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__title {
+      margin-bottom: 50px;
+      width: 354px;
+      text-align: start;
+      @include font(22px, 1.5, 700);
+    }
+    &__text {
+      margin-bottom: 52px;
+      padding-top: 3px;
+      width: 279px;
+      text-align: left;
+      @include font(14px, 1.5, 400);
+      letter-spacing: 0em;
+    }
+    &__button {
+      display: none;
+    }
+  }
+}
+
+@include mq(desktop) {
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &__title {
+      margin-bottom: 30px;
+      width: 482px;
+      text-align: start;
+      @include font(30px, 1.5, 700);
+    }
+    &__text {
+      margin-bottom: 39px;
+      padding-top: 9px;
+      width: 323px;
+      text-align: left;
+      @include font(16px, 1.5, 400);
+    }
+  }
+}
+
+@include mq(hd) {
+  .hero {
+    padding-top: 100px;
+
+    &__title {
+      margin-bottom: 30px;
+      width: 653px;
+      text-align: start;
+      @include font(40px, 1.5, 700);
+      letter-spacing: 0.05em;
+    }
+    &__text {
+      margin-bottom: 46px;
+      padding-top: 15px;
+      width: 383px;
+      text-align: left;
+      font-family: Roboto;
+      @include font(20px, 1.5, 400);
+    }
+  }
+}
