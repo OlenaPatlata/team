@@ -1,0 +1,43 @@
+.title {
+  text-transform: uppercase;
+  color: var(--color-title);
+  @include font(16px, 1.5, 700);
+
+  @include mq(mobile-only) {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  @include mq(tablet) {
+    @include font(22px, null, null);
+    display: flex;
+    align-items: center;
+  }
+
+  @include mq(desktop) {
+    @include font(30px, null, null);
+  }
+
+  @include mq(hd) {
+    @include font(40px, null, null);
+  }
+
+  &__line:before {
+    @include mq(tablet) {
+      content: '';
+      display: block;
+      margin-right: 20px;
+      width: 30px;
+      height: 3px;
+      background-color: var(--color-accent);
+    }
+
+    @include mq(desktop) {
+      width: 50px;
+    }
+
+    @include mq(hd) {
+      margin-right: 30px;
+    }
+  }
+}
