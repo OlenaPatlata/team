@@ -107,7 +107,7 @@ button {
 .header {
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: #000;
+  background-color: var(--background-light);
 }
 
 .example {
