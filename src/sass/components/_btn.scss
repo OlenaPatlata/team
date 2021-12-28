@@ -1,22 +1,23 @@
 .btn {
-  font-family: Inter, Sans-Serif;
+  font-family: 'Inter', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(-background-btn-normal);
+  background-color: var(--background-btn-normal);
   color: var(--color-button-text);
+  border: 1px solid transparent;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
   @include font(14px, 1.21, 600);
-  padding-top: 16px;
-  padding-bottom: 16px;
-  @include mq(desctop) {
+  padding: 16px 30px;
+  @include mq(desktop) {
     @include font(16px, 1.19, 600);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 36px;
   }
   @include mq(hd) {
     @include font(20px, 1.2, 600);
-    padding-top: 23px;
-    padding-bottom: 23px;
+    padding: 23px 36px;
   }
   &:hover,
   &:focus {
@@ -24,5 +25,8 @@
   }
   &:active {
     background-color: var(--background-btn-pressed);
+  }
+  &:disabled {
+    background-color: var(--background-btn-disabled);
   }
 }
