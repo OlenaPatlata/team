@@ -1,4 +1,5 @@
 .title {
+  font-family: 'Inter', sans-serif;
   text-transform: uppercase;
   color: var(--color-title);
   @include font(16px, 1.5, 700);
