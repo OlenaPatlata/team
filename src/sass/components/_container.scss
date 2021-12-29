@@ -10,7 +10,6 @@
 
   @include mq(tablet) {
     width: 708px;
-    outline: 1px solid red;
   }
   @include mq(desktop) {
     width: 960px;
