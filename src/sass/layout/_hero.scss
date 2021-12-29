@@ -1,12 +1,11 @@
 // Секция Hero
 
-@include mq(mobile-only) {
-  .hero {
-    background: var(--background-dark);
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
+.hero {
+  background: var(--background-dark);
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
+
 @include mq(tablet) {
   .hero {
     padding-top: 70px;
