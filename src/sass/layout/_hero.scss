@@ -1,0 +1,133 @@
+// Секция Hero
+
+.hero {
+  background: var(--background-dark);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@include mq(tablet) {
+  .hero {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+@include mq(desktop) {
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+@include mq(hd) {
+  .hero {
+    padding-top: 100px;
+  }
+}
+
+//   Стили заголовка секции
+
+.hero__title {
+  display: block;
+  margin-bottom: 20px;
+
+  font-family: Inter;
+  @include font(16px, 1.5, 700);
+
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: var(--color-title);
+}
+@include mq(tablet) {
+  .hero__title {
+    margin: 0;
+    width: 354px;
+    text-align: left;
+    @include font(22px, null, null);
+  }
+}
+@include mq(desktop) {
+  .hero__title {
+    width: 482px;
+    text-align: left;
+    @include font(30px, null, null);
+  }
+}
+@include mq(hd) {
+  .hero__title {
+    width: 653px;
+    text-align: left;
+    @include font(40px, 1.5, 700);
+    letter-spacing: 0.05em;
+  }
+}
+// Стиль текста абзаца секции
+
+.hero__text {
+  display: block;
+  margin-bottom: 20px;
+
+  font-family: Inter;
+  @include font(12px, 1.5, 400);
+
+  text-align: center;
+  color: var(--color-text);
+}
+@include mq(tablet) {
+  .hero__text {
+    margin: 0;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    width: 279px;
+    text-align: left;
+    @include font(14px, null, null);
+    letter-spacing: 0em;
+  }
+}
+@include mq(desktop) {
+  .hero__text {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    width: 323px;
+    text-align: left;
+    @include font(16px, null, null);
+  }
+}
+@include mq(hd) {
+  .hero__text {
+    padding-top: 15px;
+    padding-bottom: 16px;
+    width: 383px;
+    text-align: left;
+    font-family: Roboto;
+    @include font(20px, null, null);
+  }
+}
+// Контейнер для flex позиционирования и размещения заголовка с абзацем секции
+
+@include mq(tablet) {
+  .hero__wrap-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+}
+@include mq(desktop) {
+  .hero__wrap-container {
+    margin-bottom: 30px;
+  }
+}
+
+// Стили кнопки Заказать Услугу
+.hero__btn {
+  margin-bottom: 30px;
+}
+
+@include mq(tablet) {
+  .hero__btn {
+    display: none;
+  }
+}
