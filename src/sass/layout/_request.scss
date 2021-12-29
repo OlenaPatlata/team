@@ -70,12 +70,25 @@
     align-content: flex-start;
     align-items: flex-start;
   }
-  &__label {
+  &__label:nth-child(1) {
+    display: block;
+    margin-bottom: 15px;
     @include mq(tablet) {
+      margin-bottom: 20px;
+      margin-right: 30px;
+    }
+    @include mq(desktop) {
+      margin-bottom: 10px;
+    }
+    @include mq(hd) {
+      margin-bottom: 15px;
     }
   }
-  &:checked {
-    color: var(-color-text);
+  &__label:nth-child(2) {
+    display: block;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 10px;
+    }
   }
   &__input {
     @include font(12px, 1.5, 400);
@@ -99,24 +112,6 @@
       @include font(20px, 1.5, 400);
       width: 405px;
       height: 70px;
-    }
-  }
-  &__input-first {
-    margin-bottom: 15px;
-    @include mq(tablet) {
-      margin-bottom: 20px;
-      margin-right: 30px;
-    }
-    @include mq(desktop) {
-      margin-bottom: 10px;
-    }
-    @include mq(hd) {
-      margin-bottom: 15px;
-    }
-  }
-  &__input-second {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 10px;
     }
   }
   &__label-file {
