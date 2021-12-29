@@ -63,7 +63,7 @@
   }
   &__title {
     color: var(--color-title-additional);
-    text-align: center;
+
     @include mq(tablet) {
       color: var(--color-title);
       text-align: start;
@@ -78,29 +78,30 @@
   }
   &__text {
     @include font(12px, 1.5, 400);
-    // letter-spacing: 0.05em;
+
     color: var(--color-text);
-    margin-bottom: 15px;
     text-align: center;
     @include mq(tablet) {
       @include font(14px, 1.5, 400);
-      margin-bottom: 40px;
+
       text-align: start;
     }
     @include mq(desktop) {
       @include font(16px, 1.5, 400);
-      margin-bottom: 0;
     }
     @include mq(hd) {
       @include font(20px, 1.5, 400);
     }
   }
   &__wrapp {
+    margin-bottom: 15px;
+    @include mq(tablet) {
+      margin-bottom: 40px;
+    }
     @include mq(desktop) {
       display: flex;
       align-items: start;
       justify-content: start;
-      margin-bottom: 40px;
     }
     @include mq(hd) {
       margin-bottom: 50px;
