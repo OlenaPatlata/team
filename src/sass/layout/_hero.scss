@@ -109,7 +109,7 @@
 
 // Стили кнопки Заказать Услугу
 
-@include mq(mobile-only) {
+@media screen and (max-width: 767px) {
   .hero__btn {
     margin-bottom: 30px;
     margin-left: auto;
