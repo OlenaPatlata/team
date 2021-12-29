@@ -29,32 +29,23 @@
 
 //   Стили заголовка секции
 
-@include mq(mobile-only) {
-  .hero__title {
-    letter-spacing: 0.05em;
-  }
-}
 @include mq(tablet) {
   .hero__title {
     margin: 0;
     width: 354px;
     text-align: left;
-    @include font(22px, null, null);
   }
 }
 @include mq(desktop) {
   .hero__title {
     width: 482px;
     text-align: left;
-    @include font(30px, null, null);
   }
 }
 @include mq(hd) {
   .hero__title {
     width: 653px;
     text-align: left;
-    @include font(40px, 1.5, 700);
-    letter-spacing: 0.05em;
   }
 }
 // Стиль текста абзаца секции
@@ -75,7 +66,6 @@
     width: 279px;
     text-align: left;
     @include font(14px, null, null);
-    letter-spacing: 0em;
   }
 }
 @include mq(desktop) {
@@ -99,8 +89,8 @@
 }
 // Контейнер для flex позиционирования и размещения заголовка с абзацем секции
 
-@include mq(mobile-only) {
-  .hero__wrap-container {
+.hero__wrap-container {
+  @media screen and (max-width: 767px) {
     margin-bottom: 20px;
   }
 }
