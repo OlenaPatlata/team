@@ -1,0 +1,123 @@
+// Секция Hero
+
+.hero {
+  background: var(--background-dark);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@include mq(tablet) {
+  .hero {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+@include mq(desktop) {
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+@include mq(hd) {
+  .hero {
+    padding-top: 100px;
+  }
+}
+
+//   Стили заголовка секции
+
+@include mq(tablet) {
+  .hero__title {
+    margin: 0;
+    width: 354px;
+    text-align: left;
+  }
+}
+@include mq(desktop) {
+  .hero__title {
+    width: 482px;
+    text-align: left;
+  }
+}
+@include mq(hd) {
+  .hero__title {
+    width: 653px;
+    text-align: left;
+  }
+}
+// Стиль текста абзаца секции
+
+@include mq(mobile-only) {
+  .hero__text {
+    font-family: Inter;
+    @include font(12px, 1.5, 400);
+
+    text-align: center;
+    color: var(--color-text);
+  }
+}
+@include mq(tablet) {
+  .hero__text {
+    padding-top: 3px;
+    padding-bottom: 2px;
+    width: 279px;
+    text-align: left;
+    @include font(14px, null, null);
+  }
+}
+@include mq(desktop) {
+  .hero__text {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    width: 323px;
+    text-align: left;
+    @include font(16px, null, null);
+  }
+}
+@include mq(hd) {
+  .hero__text {
+    padding-top: 15px;
+    padding-bottom: 16px;
+    width: 383px;
+    text-align: left;
+    font-family: Roboto;
+    @include font(20px, null, null);
+  }
+}
+// Контейнер для flex позиционирования и размещения заголовка с абзацем секции
+
+.hero__wrap-container {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+}
+@include mq(tablet) {
+  .hero__wrap-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+}
+@include mq(desktop) {
+  .hero__wrap-container {
+    margin-bottom: 30px;
+  }
+}
+
+// Стили кнопки Заказать Услугу
+
+@media screen and (max-width: 767px) {
+  .hero__btn {
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@include mq(tablet) {
+  .hero__btn {
+    display: none;
+  }
+}
