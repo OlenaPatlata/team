@@ -1,0 +1,32 @@
+.btn {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-btn-normal);
+  color: var(--color-button-text);
+  border: none;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+  @include font(14px, 1.21, 600);
+  padding: 16px 30px;
+  @include mq(desktop) {
+    @include font(16px, 1.19, 600);
+    padding: 20px 36px;
+  }
+  @include mq(hd) {
+    @include font(20px, 1.2, 600);
+    padding: 23px 36px;
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--background-btn-hover);
+  }
+  &:active {
+    background-color: var(--background-btn-pressed);
+  }
+  &:disabled {
+    background-color: var(--background-btn-disabled);
+  }
+}

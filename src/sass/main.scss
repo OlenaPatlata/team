@@ -15,8 +15,10 @@
 // COMPONENTS
 @import './components/section';
 @import './components/container';
+@import './components/btn';
 
 // LAYOUT
+@import './layout/request';
 
 // Стили для файла с примером HTML-фрагмента
 @import './example';
