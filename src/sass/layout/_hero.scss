@@ -9,14 +9,13 @@
 @include mq(tablet) {
   .hero {
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 0;
   }
 }
 
 @include mq(desktop) {
   .hero {
     padding-top: 80px;
-    padding-bottom: 80px;
   }
 }
 
@@ -30,7 +29,6 @@
 
 @include mq(tablet) {
   .hero__title {
-    margin: 0;
     width: 354px;
     text-align: left;
   }
@@ -38,13 +36,11 @@
 @include mq(desktop) {
   .hero__title {
     width: 482px;
-    text-align: left;
   }
 }
 @include mq(hd) {
   .hero__title {
     width: 653px;
-    text-align: left;
   }
 }
 // Стиль текста абзаца секции
@@ -72,7 +68,7 @@
     padding-top: 9px;
     padding-bottom: 9px;
     width: 323px;
-    text-align: left;
+
     @include font(16px, null, null);
   }
 }
@@ -81,7 +77,7 @@
     padding-top: 15px;
     padding-bottom: 16px;
     width: 383px;
-    text-align: left;
+
     font-family: Roboto;
     @include font(20px, null, null);
   }
