@@ -31,6 +31,8 @@
     @include mq(tablet) {
       display: flex;
       align-items: center;
+      font-family: Inter, Sans-Serif;
+      @include font(22px, 1.5, bold);
 
       &:before {
         display: block;
@@ -72,7 +74,7 @@
 
     &-three {
       max-width: 250px;
-      margin: auto;
+      margin: 0 auto;
       text-align: center;
       font-family: Inter, Sans-Serif;
       @include font(14px, 1.21, 600);
@@ -120,7 +122,9 @@
     border: 1px solid rgba(162, 170, 178, 1);
 
     @include mq(desktop) {
-      width: 290px;
+      position: relative;
+      /* width: 290px; */
+      width: calc(100% / 3 - 30px);
       height: 200px;
       margin-right: 0;
       margin-bottom: 0;
@@ -143,7 +147,8 @@
     @include mq(tablet-only) {
       display: flex;
       justify-content: center;
-      max-width: 324px;
+      /* max-width: 324px; */
+      width: calc(100% / 2 - 30px);
       height: 200px;
 
       &:nth-child(odd) {
@@ -162,13 +167,27 @@
 
     &-pitch {
       padding-top: 39px;
-      padding-bottom: 39px;
+      /* padding-bottom: 39px; */
       padding-right: 20px;
       padding-left: 20px;
 
       @include mq(tablet) {
         display: flex;
         flex-direction: column;
+        margin: auto;
+        padding-top: 0;
+        max-height: 128px;
+        max-width: 250px;
+      }
+
+      @include mq(desktop) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 250px;
+        width: 250px;
+        max-height: 128px;
       }
     }
 
@@ -183,6 +202,7 @@
       @include mq(tablet) {
         width: 60px;
         height: 60px;
+        margin-bottom: 30px;
       }
     }
   }
