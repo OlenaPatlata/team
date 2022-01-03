@@ -1,0 +1,320 @@
+.hero__swiper.swiper {
+  width: 100%;
+  height: 100%;
+  background: #dfe1e3;
+}
+
+.hero__swiper-wrapper.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+// Стили указателей страниц
+
+.swiper-pagination-bullet {
+  background-color: var(--background-dark);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-accent);
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 5px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 20px;
+}
+
+@include mq(tablet) {
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0 7.5px;
+  }
+}
+
+@include mq(desktop) {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 25px;
+  }
+}
+// Стили кнопок
+
+.hero__button-next,
+.hero__button-prev {
+  width: 0;
+  height: 0;
+  border: none;
+}
+// Убираем стилизированные кнопки по умолчанию
+
+.hero__button-prev:after {
+  content: "";
+}
+
+.hero__button-next:after {
+  content: "";
+}
+
+// Стили кнопок для таблетки
+
+@include mq(tablet) {
+  .hero__button-next,
+  .hero__button-prev {
+    width: 40px;
+    height: 40px;
+    border: solid 2px var(--color-accent);
+  }
+  .swiper-button-next,
+  .swiper-rtl .hero__button-prev {
+    right: 15px;
+    left: auto;
+  }
+
+  .swiper-button-prev,
+  .swiper-rtl .hero__button-next {
+    left: 15px;
+    right: auto;
+  }
+
+  .hero__button-next:after {
+    content: "";
+    width: 9px;
+    height: 12px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='12' viewBox='0 0 9 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9 6L3.37555e-06 11.1962L2.01276e-06 0.803849L9 6Z' fill='%232B2B2B'/%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero__button-prev:after {
+    content: "";
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='12' viewBox='0 0 9 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M-2.62268e-07 6L9 0.803848L9 11.1962L-2.62268e-07 6Z' fill='%232B2B2B'/%3e%3c/svg%3e");
+    width: 9px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+// Стили кнопок для десктопа
+
+@include mq(desktop) {
+  .hero__button-next,
+  .hero__button-prev {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--color-accent);
+  }
+
+  .swiper-button-next,
+  .swiper-rtl .hero__button-prev {
+    right: 77px;
+    left: auto;
+  }
+
+  .swiper-button-prev,
+  .swiper-rtl .hero__button-next {
+    left: 77px;
+    right: auto;
+  }
+
+  .hero__button-next:after {
+    content: "";
+    width: 12px;
+    height: 14px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12 7L-6.52533e-07 13.9282L-4.68497e-08 0.0717964L12 7Z' fill='%232B2B2B'/%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero__button-prev:after {
+    content: "";
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M-3.49691e-07 7L12 0.0717959L12 13.9282L-3.49691e-07 7Z' fill='%232B2B2B'/%3e%3c/svg%3e ");
+    width: 12px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@include mq(hd) {
+  .hero__button-next,
+  .hero__button-prev {
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--color-accent);
+  }
+
+  .hero__button-next:after {
+    content: "";
+    width: 14px;
+    height: 16px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='16' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14 8L0.499999 15.7942L0.5 0.205771L14 8Z' fill='%232B2B2B'/%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero__button-prev:after {
+    content: "";
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='16' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M-4.23664e-07 8L13.5 0.205772L13.5 15.7942L-4.23664e-07 8Z' fill='%232B2B2B'/%3e%3c/svg%3e ");
+    width: 14px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+// Стили кнопок при наведении мышкой и нажатием
+
+.hero__button-prev:hover {
+  background-color: var(--background-btn-hover);
+}
+.hero__button-next:hover {
+  background-color: var(--background-btn-hover);
+}
+
+.hero__button-prev:focus {
+  background-color: #a20209;
+}
+.hero__button-next:focus {
+  background-color: #a20209;
+}
+
+// Стили кнопок при выключенном состоянии
+
+@include mq(tablet) {
+  .hero__button-next.swiper-button-disabled,
+  .hero__button-prev.swiper-button-disabled {
+    width: 40px;
+    height: 40px;
+    border: solid 2px var(--background-btn-disabled);
+    opacity: 1;
+  }
+
+  .swiper-button-disabled.hero__button-next:after {
+    content: "";
+    width: 9px;
+    height: 12px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='12' viewBox='0 0 9 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9 6L3.37555e-06 11.1962L2.01276e-06 0.803849L9 6Z' fill='%23BDBDBD'/%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .swiper-button-disabled.hero__button-prev:after {
+    content: "";
+    width: 9px;
+    height: 12px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='12' viewBox='0 0 9 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M-2.62268e-07 6L9 0.803848L9 11.1962L-2.62268e-07 6Z' fill='%23BDBDBD'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@include mq(desktop) {
+  .hero__button-next.swiper-button-disabled,
+  .hero__button-prev.swiper-button-disabled {
+    width: 50px;
+    height: 50px;
+    border: solid 3px var(--background-btn-disabled);
+  }
+
+  .swiper-button-disabled.hero__button-next:after {
+    content: "";
+    width: 12px;
+    height: 14px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12 7L-6.52533e-07 13.9282L-4.68497e-08 0.0717964L12 7Z' fill='%23BDBDBD'/%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .swiper-button-disabled.hero__button-prev:after {
+    content: "";
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M-3.49691e-07 7L12 0.0717959L12 13.9282L-3.49691e-07 7Z' fill='%23BDBDBD'/%3e%3c/svg%3e ");
+    width: 12px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@include mq(hd) {
+  .hero__button-next.swiper-button-disabled,
+  .hero__button-prev.swiper-button-disabled {
+    width: 60px;
+    height: 60px;
+  }
+
+  .swiper-button-disabled.hero__button-next:after {
+    content: "";
+    width: 14px;
+    height: 16px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='16' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14 8L0.499999 15.7942L0.5 0.205771L14 8Z' fill='%23BDBDBD'/%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .swiper-button-disabled.hero__button-prev:after {
+    content: "";
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='16' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M-4.23664e-07 8L13.5 0.205772L13.5 15.7942L-4.23664e-07 8Z' fill='%23BDBDBD'/%3e%3c/svg%3e ");
+    width: 14px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@include mq(desktop) {
+  .hero__container {
+    width: 1024px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@include mq(desktop) {
+  .hero__swiper-slide.swiper-slide.swiper-slide-prev,
+  .hero__swiper-slide.swiper-slide.swiper-slide-next {
+    opacity: 0.5;
+  }
+}
+// Параметры центрирующего контейнера для секции при 1920px
+
+@include mq(hd) {
+  .hero__swiper.swiper {
+    position: relative;
+  }
+  .hero__container {
+    width: 1920px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .swiper-button-next,
+  .swiper-rtl .hero__button-prev {
+    right: 285px;
+    left: auto;
+  }
+
+  .swiper-button-prev,
+  .swiper-rtl .hero__button-next {
+    left: 285px;
+    right: auto;
+  }
+}
