@@ -5,6 +5,7 @@
 
   &__text-wrap {
     display: block;
+    margin-bottom: 15px;
     @include mq(tablet) {
       display: flex;
       /* justify-content: space-around; */
@@ -22,6 +23,7 @@
 
   @include mq(tablet) {
     padding-top: 90px;
+    padding-bottom: 90px;
   }
 
   @include mq(desktop) {
@@ -79,7 +81,7 @@
   }
 
   &__list {
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 
     @include mq(tablet) {
       margin-bottom: 0;
@@ -140,7 +142,12 @@
     }
 
     @include mq(desktop) {
+      margin-bottom: 60px;
       width: 100%;
+    }
+
+    @include mq(hd) {
+      margin-bottom: 70px;
     }
   }
 }
