@@ -21,7 +21,7 @@
   }
 
   &__title {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px;
     text-align: center;
     text-transform: uppercase;
 
@@ -54,13 +54,16 @@
 
     @include mq(hd) {
       @include font(40px, 1.5, bold);
-    }
+    } */
 
     &-wrap {
+      margin-bottom: 20px;
+
       @include mq(tablet) {
         display: flex;
 
         justify-content: space-between;
+        margin-bottom: 50px;
       }
 
       @include mq(desktop) {
@@ -86,7 +89,6 @@
   }
 
   &__descript {
-    margin-bottom: 20px;
     text-align: center;
     @include font(12px, 1.5, normal);
 
@@ -116,6 +118,9 @@
   }
 
   &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 160px;
     width: 290px;
     width: 100%;
@@ -166,14 +171,15 @@
     }
 
     &-pitch {
-      padding-top: 39px;
-      /* padding-bottom: 39px; */
       padding-right: 20px;
       padding-left: 20px;
 
       @include mq(tablet) {
         display: flex;
         flex-direction: column;
+
+        justify-content: center;
+        width: 100%;
         margin: auto;
         padding-top: 0;
         max-height: 128px;
@@ -192,7 +198,6 @@
     }
 
     &-icon {
-      display: block;
       margin: auto;
       margin-bottom: 15px;
 

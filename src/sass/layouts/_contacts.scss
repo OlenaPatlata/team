@@ -85,7 +85,7 @@
       margin-bottom: 0;
     }
 
-    & li {
+    & li:not(:last-child) {
       margin-bottom: 10px;
     }
   }
