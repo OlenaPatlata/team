@@ -133,8 +133,7 @@
 
     @include mq(desktop) {
       position: relative;
-      /* width: 290px; */
-      width: calc(100% / 3 - 30px);
+      width: 290px;
       height: 200px;
       margin-right: 0;
       margin-bottom: 0;
@@ -157,8 +156,7 @@
     @include mq(tablet-only) {
       display: flex;
       justify-content: center;
-      /* max-width: 324px; */
-      width: calc(100% / 2 - 30px);
+      max-width: 324px;
       height: 200px;
 
       &:nth-child(odd) {

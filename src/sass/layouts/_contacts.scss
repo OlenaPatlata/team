@@ -1,6 +1,10 @@
-.contacts {
+.contacts-main {
   padding-top: 40px;
   padding-bottom: 40px;
+  background-color: var(--background-dark);
+}
+
+.contacts {
   background-color: var(--background-dark);
 
   &__text-wrap {
