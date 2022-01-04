@@ -18,9 +18,11 @@
 @import './components/btn';
 
 // LAYOUT
+@import './layout/hero';
+@import './layouts/about-us';
 @import './layout/request';
+@import './layouts/contacts';
 @import './layout/footer';
 
 // Стили для файла с примером HTML-фрагмента
 @import './example';
-@import './layout/hero';
