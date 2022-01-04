@@ -1,7 +1,7 @@
 .complited {
   padding-top: 40px;
-  padding-bottom: 100px;
-  background-color: #ebebeb;
+  padding-bottom: 80px;
+  background-color: var(--background-light);
 
   @include mq(tablet) {
     padding-top: 90px;
@@ -52,13 +52,13 @@
 
     @include mq(tablet) {
       display: flex;
+      justify-content: space-between;
       padding-top: 33px;
       padding-bottom: 0;
     }
 
     @include mq(desktop) {
       padding-top: 42px;
-      justify-content: space-between;
     }
 
     @include mq(desktop) {
@@ -68,17 +68,16 @@
 
   &__content-wrapper {
     @include mq(tablet) {
-      width: 350px;
-      margin-right: 31px;
+      width: 325px;
     }
 
     @include mq(desktop) {
-      width: 390px;
+      width: 410px;
       margin-right: 0;
     }
 
     @include mq(hd) {
-      width: 490px;
+      width: 500px;
     }
   }
 
@@ -86,7 +85,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #a2aab2;
+    border: 1px solid var(--color-line);
 
     margin-top: 0;
     margin-right: auto;
@@ -131,7 +130,7 @@
     margin-bottom: 8px;
 
     @include mq(tablet) {
-      display: block;
+      display: flex;
     }
 
     @include mq(desktop) {
@@ -169,12 +168,16 @@
     @include mq(desktop) {
       width: 450px;
     }
+
+    @include mq(hd) {
+      width: 540px;
+    }
   }
 
   &__text {
     @include font(12px, 1.5, 400);
-    letter-spacing: 0.01em;
-    display: inline;
+    // letter-spacing: 0.01em;
+    display: block;
 
     @include mq(tablet) {
       @include font(14px, null, null);
