@@ -14,7 +14,7 @@
         <symbol id="icon-polygon-left" viewBox="0 0 32 32">
             <path d="M2 16 29 .412v31.177L2 16.001z" />
         </symbol>
-        <symbol id="" viewBox="0 0 32 32">
+        <symbol id="icon-polygon-right" viewBox="0 0 32 32">
             <path d="M30 16 3 31.588V.411l27 15.588z" />
         </symbol>
 
