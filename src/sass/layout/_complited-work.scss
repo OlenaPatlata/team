@@ -1,0 +1,244 @@
+.complited {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  background-color: var(--background-light);
+
+  @include mq(tablet) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+
+  @include mq(hd) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__swiper {
+    @include mq(mobile-only) {
+      position: static;
+    }
+
+    @include mq(hd) {
+      position: static;
+    }
+  }
+
+  &__title {
+    @include mq(tablet) {
+      margin-bottom: 50px;
+    }
+
+    @include mq(desktop) {
+      margin-bottom: 60px;
+    }
+
+    @include mq(hd) {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__wrap {
+    padding-top: 15px;
+    padding-bottom: 20px;
+
+    @include mq(tablet) {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 33px;
+      padding-bottom: 0;
+    }
+
+    @include mq(desktop) {
+      padding-top: 42px;
+    }
+
+    @include mq(desktop) {
+      padding-top: 50px;
+    }
+  }
+
+  &__content-wrapper {
+    @include mq(tablet) {
+      width: 325px;
+    }
+
+    @include mq(desktop) {
+      width: 410px;
+      margin-right: 0;
+    }
+
+    @include mq(hd) {
+      width: 500px;
+    }
+  }
+
+  &__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-line);
+
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+    width: 128px;
+    height: 35px;
+
+    font-family: Inter;
+    @include font(12px, 1.25, 600);
+    letter-spacing: 0.05em;
+    color: var(--color-title);
+
+    @include mq(tablet) {
+      margin-top: 0;
+      margin-right: 0;
+      margin-left: 0;
+      margin-bottom: 17px;
+
+      width: 167px;
+      height: 39px;
+      @include font(16px, 1.87, 600);
+    }
+
+    @include mq(desktop) {
+      @include font(24px, 1.87, 600);
+      width: 216px;
+      height: 48px;
+      margin-bottom: 20px;
+    }
+
+    @include mq(hd) {
+      @include font(26px, 1.19, 600);
+      width: 260px;
+      height: 54px;
+      margin-bottom: 33px;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    margin-bottom: 8px;
+
+    @include mq(tablet) {
+      display: flex;
+    }
+
+    @include mq(desktop) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__data {
+    font-family: Inter;
+    @include font(12px, 1.25, 600);
+    color: var(--color-title);
+    letter-spacing: 0.01em;
+    margin-right: 10px;
+
+    @include mq(tablet) {
+      @include font(14px, 1.25, 600);
+    }
+
+    @include mq(desktop) {
+      @include font(16px, 1.25, 600);
+      margin-right: 15px;
+    }
+
+    @include mq(hd) {
+      @include font(20px, 1.2, 600);
+      margin-right: 20px;
+    }
+  }
+
+  &__text--wrapper {
+    @include mq(tablet) {
+      width: 324px;
+    }
+
+    @include mq(desktop) {
+      width: 450px;
+    }
+
+    @include mq(hd) {
+      width: 540px;
+    }
+  }
+
+  &__text {
+    @include font(12px, 1.5, 400);
+    // letter-spacing: 0.01em;
+    display: block;
+
+    @include mq(tablet) {
+      @include font(14px, null, null);
+    }
+
+    @include mq(desktop) {
+      @include font(16px, null, null);
+    }
+
+    @include mq(hd) {
+      @include font(20px, null, null);
+    }
+  }
+}
+
+.swiper-button-next,
+.swiper-rtl .complited__prev--button {
+  @include mq(mobile-only) {
+    top: unset;
+    right: 105px;
+    bottom: -40px;
+  }
+
+  @include mq(tablet) {
+    top: 34%;
+    right: 17px;
+    bottom: unset;
+  }
+
+  @include mq(desktop) {
+    top: 35%;
+    right: 30px;
+  }
+
+  @include mq(hd) {
+    top: 40%;
+    right: -100px;
+  }
+}
+
+.swiper-button-prev,
+.swiper-rtl .complited__next--button {
+  @include mq(mobile-only) {
+    top: unset;
+    left: 105px;
+    bottom: -40px;
+  }
+
+  @include mq(tablet) {
+    top: 34%;
+    left: 17px;
+    bottom: unset;
+  }
+
+  @include mq(desktop) {
+    top: 35%;
+    left: 30px;
+  }
+
+  @include mq(hd) {
+    top: 40%;
+    left: -100px;
+  }
+}
