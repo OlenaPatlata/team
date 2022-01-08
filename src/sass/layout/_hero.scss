@@ -1,26 +1,26 @@
 // Секция Hero
 
-.hero {
+.hero__section {
   background: var(--background-dark);
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
 @include mq(tablet) {
-  .hero {
+  .hero__section {
     padding-top: 70px;
     padding-bottom: 0;
   }
 }
 
 @include mq(desktop) {
-  .hero {
+  .hero__section {
     padding-top: 80px;
   }
 }
 
 @include mq(hd) {
-  .hero {
+  .hero__section {
     padding-top: 100px;
   }
 }
@@ -30,17 +30,20 @@
 @include mq(tablet) {
   .hero__title {
     width: 354px;
+    margin-right: 45px;
     text-align: left;
   }
 }
 @include mq(desktop) {
   .hero__title {
     width: 482px;
+    margin-right: 125px;
   }
 }
 @include mq(hd) {
   .hero__title {
     width: 653px;
+    margin-right: 74px;
   }
 }
 // Стиль текста абзаца секции
@@ -92,7 +95,7 @@
 @include mq(tablet) {
   .hero__wrap-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 50px;
   }
@@ -100,6 +103,11 @@
 @include mq(desktop) {
   .hero__wrap-container {
     margin-bottom: 30px;
+  }
+}
+@include mq(hd) {
+  .hero__wrap-container {
+    justify-content: center;
   }
 }
 

@@ -36,8 +36,24 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
+      let width = screen.availWidth;
+      var $slidesPerView = 1;
+      var $spaceBetween = 0;
+      var $centeredSlides = false;
+
+      if (width >= 1024) {
+        $slidesPerView = 1.098;
+        $centeredSlides = true;
+        $spaceBetween = 30;
+      }
+      if (width >= 1920) {
+        $slidesPerView = 1.71;
+      }
       var swiper = new Swiper('.mySwiper', {
         cssMode: true,
+        slidesPerView: $slidesPerView,
+        centeredSlides: $centeredSlides,
+        spaceBetween: $spaceBetween,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
