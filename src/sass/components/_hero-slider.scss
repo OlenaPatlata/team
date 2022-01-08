@@ -92,19 +92,21 @@
     height: 40px;
     border: solid 2px var(--color-accent);
   }
-  .swiper-button-next,
+  .hero__button-next.swiper-button-next,
   .swiper-rtl .hero__button-prev {
+    top: 50%;
     right: 15px;
     left: auto;
   }
 
-  .swiper-button-prev,
+  .hero__button-prev.swiper-button-prev,
   .swiper-rtl .hero__button-next {
+    top: 50%;
     left: 15px;
     right: auto;
   }
 
-  .hero__button-next:after {
+  .hero__button-next.swiper-button-next:after {
     content: '';
     width: 12px;
     height: 12px;
@@ -114,7 +116,7 @@
     background-position: center;
   }
 
-  .hero__button-prev:after {
+  .hero__button-prev.swiper-button-prev:after {
     content: '';
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='12' viewBox='0 0 9 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M-2.62268e-07 6L9 0.803848L9 11.1962L-2.62268e-07 6Z' fill='%232B2B2B'/%3e%3c/svg%3e");
     width: 12px;
@@ -135,25 +137,27 @@
     border: 3px solid var(--color-accent);
   }
 
-  .swiper-button-next,
+  .hero__button-next.swiper-button-next,
   .swiper-rtl .hero__button-prev {
+    top: 50%;
     right: 77px;
     left: auto;
   }
 
-  .swiper-button-prev,
+  .hero__button-prev.swiper-button-prev,
   .swiper-rtl .hero__button-next {
+    top: 50%;
     left: 77px;
     right: auto;
   }
 
-  .hero__button-next:after {
+  .hero__button-next.swiper-button-next:after {
     content: '';
     width: 16px;
     height: 16px;
   }
 
-  .hero__button-prev:after {
+  .hero__button-prev.swiper-button-prev:after {
     content: '';
     width: 16px;
     height: 16px;
@@ -167,13 +171,13 @@
     border: 3px solid var(--color-accent);
   }
 
-  .hero__button-next:after {
+  .hero__button-next.swiper-button-next:after {
     content: '';
     width: 18px;
     height: 18px;
   }
 
-  .hero__button-prev:after {
+  .hero__button-prev.swiper-button-prev:after {
     content: '';
     width: 18px;
     height: 18px;
@@ -291,14 +295,16 @@
 
   // Положение кнопок слайдера
 
-  .swiper-button-next,
+  .hero__button-next.swiper-button-next,
   .swiper-rtl .hero__button-prev {
+    top: 50%;
     right: 285px;
     left: auto;
   }
 
-  .swiper-button-prev,
+  .hero__button-prev.swiper-button-prev,
   .swiper-rtl .hero__button-next {
+    top: 50%;
     left: 285px;
     right: auto;
   }
