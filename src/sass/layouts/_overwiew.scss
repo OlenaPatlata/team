@@ -1,0 +1,120 @@
+// Секция Отзывы
+
+.overview__section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: var(--background-light);
+}
+
+@include mq(tablet) {
+  .overview__section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+@include mq(desktop) {
+  .overview__section {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+}
+@include mq(hd) {
+  .overview__section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+}
+
+.overview__item:first-child {
+  margin-bottom: 15px;
+}
+.overview-video {
+  display: block;
+}
+
+@include mq(tablet) {
+  .overview__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .overview__item:first-child {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+  .overview__title {
+    margin-bottom: 50px;
+  }
+}
+@include mq(desktop) {
+  .overview__title {
+    margin-bottom: 60px;
+  }
+}
+@include mq(hd) {
+  .overview__title {
+    margin-bottom: 70px;
+  }
+}
+
+// Оборачивающий контейнер для постера видео
+
+.video__poster {
+  width: 290px;
+  height: 182px;
+  background-size: 290px 182px;
+  background-image: url('../images/img-overview/poster_mob.jpg ');
+}
+// Размеры экрана видео
+
+.overview__video {
+  width: 290px;
+  height: 182px;
+}
+
+@include mq(tablet) {
+  .video__poster {
+    width: 324px;
+    height: 204px;
+    background-size: 324px 204px;
+    background-image: url('../images/img-overview/poster_tab.jpg ');
+  }
+
+  .overview__video {
+    width: 324px;
+    height: 204px;
+  }
+}
+
+@include mq(desktop) {
+  .video__poster {
+    width: 450px;
+    height: 283px;
+    background-size: 450px 283px;
+    background-image: url('../images/img-overview/poster_desk.jpg ');
+  }
+
+  .overview__video {
+    width: 450px;
+    height: 283px;
+  }
+}
+
+@include mq(hd) {
+  .video__poster {
+    width: 540px;
+    height: 340px;
+    background-size: 540px 340px;
+    background-image: url('../images/img-overview/poster_hd.jpg ');
+  }
+  .video__poster--hd {
+    width: 540px;
+    height: 340px;
+    background-size: 540px 340px;
+    background-image: url('../images/img-overview/poster2_hd.jpg ');
+  }
+  .overview__video {
+    width: 540px;
+    height: 340px;
+  }
+}
