@@ -21,39 +21,17 @@
       margin-bottom: 15px;
     }
   }
-  &__list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  &__item {
-    font-family: 'Inter', sans-serif;
-    @include font(12px, 1.5, 400);
-    color: var(--color-text);
-    &:not(:last-child) {
-      margin-right: 20px;
-      @include mq(desktop) {
-        margin-right: 30px;
-      }
-      @include mq(hd) {
-        margin-right: 50px;
-      }
-    }
-    @include mq(tablet) {
-      @include font(14px, 1.5, 400);
-    }
+  &__item:not(:last-child) {
+    margin-right: 20px;
     @include mq(desktop) {
-      @include font(16px, 1.5, 400);
+      margin-right: 30px;
     }
     @include mq(hd) {
-      font-family: 'Roboto', sans-serif;
-      @include font(20px, 1.5, 400);
+      margin-right: 50px;
     }
   }
-  &__link {
-    color: inherit;
-  }
 }
+
 .logo {
   @media screen and (max-width: 767px) {
     order: 1;

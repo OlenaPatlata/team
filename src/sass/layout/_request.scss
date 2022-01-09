@@ -22,8 +22,10 @@
     @include mq(tablet) {
       color: var(--color-title);
       text-align: start;
+      margin-bottom: 40px;
     }
     @include mq(desktop) {
+      margin-bottom: 0;
       margin-right: 95px;
       min-width: 385px;
     }
@@ -46,6 +48,7 @@
     }
     @include mq(hd) {
       @include font(20px, 1.5, 400);
+      width: 540px;
     }
   }
   &__wrapp {
@@ -60,6 +63,7 @@
     }
     @include mq(hd) {
       margin-bottom: 50px;
+      justify-content: space-between;
     }
   }
 }

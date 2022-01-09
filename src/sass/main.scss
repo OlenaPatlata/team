@@ -15,6 +15,7 @@
 // COMPONENTS
 @import './components/section';
 @import './components/container';
+@import './components/nav';
 @import './components/btn';
 
 @import './components/hero-slider';
@@ -24,6 +25,7 @@
 @import './components/swiper-buttons';
 
 // LAYOUT
+@import './layout/header';
 @import './layout/hero';
 @import './layouts/about-us';
 @import './layout/complited-work';
@@ -31,6 +33,3 @@
 @import './layouts/contacts';
 @import './layout/footer';
 @import './layouts/overwiew';
-
-// Стили для файла с примером HTML-фрагмента
-@import './example';

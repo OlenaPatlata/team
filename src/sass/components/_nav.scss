@@ -1,0 +1,26 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__item {
+    font-family: 'Inter', sans-serif;
+    @include font(12px, 1.5, 400);
+    color: var(--color-text);
+
+    @include mq(tablet) {
+      @include font(14px, 1.5, 400);
+    }
+    @include mq(desktop) {
+      @include font(16px, 1.5, 400);
+    }
+    @include mq(hd) {
+      font-family: 'Roboto', sans-serif;
+      @include font(20px, 1.5, 400);
+    }
+  }
+  &__link {
+    color: inherit;
+  }
+}
